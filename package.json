@@ -1,0 +1,24 @@
+{
+  "name": "ideapulse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IdeaPulse v1.0 - zero database realtime idea validation.",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:backend dev:frontend",
+    "dev:backend": "npm --workspace backend run dev",
+    "dev:frontend": "npm --workspace frontend run dev",
+    "start": "npm --workspace backend start",
+    "lint": "npm --workspace backend run lint && npm --workspace frontend run lint",
+    "secret:scan": "node scripts/check-secrets.mjs"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

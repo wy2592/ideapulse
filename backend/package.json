@@ -1,0 +1,18 @@
+{
+  "name": "@ideapulse/backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "lint": "node --check server.js && node --check pool.js && node --check queue.js && node --check quota.js && node --check gatekeeper.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ws": "^8.17.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
